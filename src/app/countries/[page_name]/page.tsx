@@ -56,7 +56,7 @@ const CountriesSingle: React.FC = () => {
           property="og:description"
           content={`Explore top medical universities in ${page_name} with Medico Overseas. Get expert guidance on the MBBS admission process, requirements, and more.`}
         />
-        <meta property="og:image" content="/path-to-your-image.jpg" />
+        <meta property="og:image" content="https://medicooverseasconsultancy.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMOC_L2.ae391ec1.jpg&w=3840&q=75" />
         <meta
           property="og:url"
           content={`https://medicooverseasconsultancy.com/countries/${page_name}`}

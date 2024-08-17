@@ -112,7 +112,7 @@ const Medical = () => {
           property="og:description"
           content="Dreaming of pursuing MBBS or Dentistry abroad? Medico Overseas is your trusted partner in turning that dream into reality."
         />
-        <meta property="og:image" content="/path-to-your-image.jpg" />
+        <meta property="og:image" content="https://medicooverseasconsultancy.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMOC_L2.ae391ec1.jpg&w=3840&q=75" />
         <meta
           property="og:url"
           content="https://medicooverseasconsultancy.com/medical"

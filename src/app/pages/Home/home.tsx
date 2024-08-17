@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Medico Overseas Consultancy",
     images: [
       {
-        url: "/path/to/social-image.jpg", // Replace with the actual path to your social image
+        url: "https://medicooverseasconsultancy.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMOC_L2.ae391ec1.jpg&w=3840&q=75", // Replace with the actual path to your social image
         width: 800,
         height: 600,
         alt: "Medico Overseas Consultancy",
@@ -41,13 +41,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    site: "@MedicoOverseas", // Replace with your Twitter handle if available
-    title: "Medico Overseas Consultancy",
-    description:
-      "Medico Overseas Consultancy - Helping students achieve their dreams of studying abroad in top universities worldwide.",
-  },
+  // twitter: {
+  //   card: "summary_large_image",
+  //   site: "@MedicoOverseas", // Replace with your Twitter handle if available
+  //   title: "Medico Overseas Consultancy",
+  //   description:
+  //     "Medico Overseas Consultancy - Helping students achieve their dreams of studying abroad in top universities worldwide.",
+  // },
 };
 
 const Home = () => {

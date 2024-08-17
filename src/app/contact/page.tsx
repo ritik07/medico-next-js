@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Col, Row, Form, Input, Button } from "antd";
 import classNames from "classnames";
 import React from "react";
@@ -8,6 +8,7 @@ import CSS from "./contact.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faMap, faPhone } from "@fortawesome/free-solid-svg-icons";
 import CoverImg from "../components/cover-img/cover-img";
+import Head from "next/head"; // Import Head from next/head
 
 const Contact = () => {
   const onFinish = (values: any) => {
@@ -20,6 +21,40 @@ const Contact = () => {
 
   return (
     <div>
+      <Head>
+        <title>Contact Us | Your Website Name</title>
+        <meta
+          name="description"
+          content="Get in touch with us at Your Website Name. We're here to help you with any inquiries or support you may need."
+        />
+        <meta
+          name="keywords"
+          content="contact, support, Your Website Name, inquiries"
+        />
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href="https://yourwebsite.com/contact" />
+        <meta property="og:title" content="Contact Us | Your Website Name" />
+        <meta
+          property="og:description"
+          content="Get in touch with us at Your Website Name. We're here to help you with any inquiries or support you may need."
+        />
+        <meta property="og:url" content="https://yourwebsite.com/contact" />
+        <meta
+          property="og:image"
+          content="https://yourwebsite.com/assets/2.jpg"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Us | Your Website Name" />
+        <meta
+          name="twitter:description"
+          content="Get in touch with us at Your Website Name. We're here to help you with any inquiries or support you may need."
+        />
+        <meta
+          name="twitter:image"
+          content="https://yourwebsite.com/assets/2.jpg"
+        />
+      </Head>
       <Fade direction="right" cascade triggerOnce>
         <CoverImg image={coverImg} text="Contact Us" />
       </Fade>
@@ -89,17 +124,6 @@ const Contact = () => {
 
           <Col xl={4}></Col>
         </Row>
-
-        {/* <div className="cs-center cs-tm-80 cs-bm-80">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.2814281847774!2d44.794883416014464!3d41.71513787923551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40447316d9ff8aab%3A0x41a229e506b42f9!2s26%20May%20St%2C%20Tbilisi%2C%20Georgia!5e0!3m2!1sen!2s!4v1620158767140!5m2!1sen!2s"
-            width="100%"
-            height="450"
-            style={{ border: 0 }}
-            allowFullScreen={false}
-            loading="lazy"
-          ></iframe>
-        </div> */}
 
         <Row className="cs-center cs-tm-80 cs-bm-80">
           <Col xs={2} sm={2} xl={4}></Col>

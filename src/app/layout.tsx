@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -11,37 +10,7 @@ import Footer from "./components/footer/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Medico Overseas Consultancy",
-  description:
-    "Medico Overseas Consultancy - Helping students achieve their dreams of studying abroad in top universities worldwide.",
-  keywords:
-    "study abroad, overseas education, MBBS abroad, Medico Overseas, consultancy, education consultancy, universities, international education",
-  openGraph: {
-    title: "Medico Overseas Consultancy",
-    description:
-      "Medico Overseas Consultancy - Helping students achieve their dreams of studying abroad in top universities worldwide.",
-    url: "https://medicooverseasconsultancy.com/",
-    siteName: "Medico Overseas Consultancy",
-    images: [
-      {
-        url: "/path/to/social-image.jpg", // Replace with the actual path to your social image
-        width: 800,
-        height: 600,
-        alt: "Medico Overseas Consultancy",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@MedicoOverseas", // Replace with your Twitter handle if available
-    title: "Medico Overseas Consultancy",
-    description:
-      "Medico Overseas Consultancy - Helping students achieve their dreams of studying abroad in top universities worldwide.",
-  },
-};
+
 
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -51,35 +20,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
 
         {/* Open Graph Meta Tags */}
-        <meta
-          property="og:title"
-          content={metadata.openGraph?.title as string}
-        />
-        <meta
-          property="og:description"
-          content={metadata.openGraph?.description as string}
-        />
-        <meta property="og:url" content={metadata.openGraph?.url as string} />
-        <meta
-          property="og:site_name"
-          content={metadata.openGraph?.siteName as string}
-        />
-        <meta
-          property="og:locale"
-          content={metadata.openGraph?.locale as string}
-        />
-
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:site" content={metadata.twitter?.site as string} />
-        <meta
-          name="twitter:title"
-          content={metadata.twitter?.title as string}
-        />
-        <meta
-          name="twitter:description"
-          content={metadata.twitter?.description as string}
-        />
-
+        
         {/* Structured Data */}
         {/* <script type="application/ld+json">
           {JSON.stringify({

@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import classNames from "classnames";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
@@ -8,6 +9,7 @@ import coverImg from "./assets/a.jpg";
 import oneImg from "./assets/1.jpg";
 import twoImg from "./assets/2.jpg";
 import CSS from "./medical.module.scss";
+import Head from "next/head"; // Import Head component from Next.js
 
 const Medical = () => {
   const medicalCourses = [
@@ -90,6 +92,38 @@ const Medical = () => {
 
   return (
     <div>
+      <Head>
+        <title>Medical Courses Abroad - Medico Overseas</title>
+        <meta
+          name="description"
+          content="Explore MBBS and Dentistry opportunities abroad with Medico Overseas. Get expert guidance, affordable options, and cultural exposure for your medical career."
+        />
+        <meta
+          name="keywords"
+          content="MBBS abroad, Dentistry abroad, Medico Overseas, medical education, international education, affordable MBBS"
+        />
+        <meta name="author" content="Medico Overseas Consultancy" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          property="og:title"
+          content="Medical Courses Abroad - Medico Overseas"
+        />
+        <meta
+          property="og:description"
+          content="Dreaming of pursuing MBBS or Dentistry abroad? Medico Overseas is your trusted partner in turning that dream into reality."
+        />
+        <meta property="og:image" content="/path-to-your-image.jpg" />
+        <meta
+          property="og:url"
+          content="https://medicooverseasconsultancy.com/medical"
+        />
+        <meta property="og:type" content="website" />
+        <link
+          rel="canonical"
+          href="https://medicooverseasconsultancy.com/medical"
+        />
+      </Head>
+
       <Fade direction="right" cascade triggerOnce>
         <CoverImg image={coverImg} text="Medical" />
       </Fade>

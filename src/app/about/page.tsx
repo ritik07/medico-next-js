@@ -111,7 +111,7 @@ const About = () => {
               </div>
               <Row>
                 <Col xl={8}>
-                  <ExploreBtn text="Free Consultation" />
+                  <ExploreBtn handleClick={()=>handleNavigate("/contact")} text="Free Consultation" />
                 </Col>
               </Row>
             </Col>

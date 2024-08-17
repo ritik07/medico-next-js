@@ -6,8 +6,15 @@ import CSS from "./browse-category.module.scss";
 import { faKitMedical } from "@fortawesome/free-solid-svg-icons";
 import { Col, Row } from "antd";
 import { Fade, Zoom, Slide } from "react-awesome-reveal";
+import { useRouter } from "next/navigation";
 
 const BrowseCategory = () => {
+  const router = useRouter();
+
+  const handleNavigate = (value: string) => {
+    router.push(value);
+  };
+
   return (
     <div>
       <Slide direction="right" delay={10} duration={1000} triggerOnce>
@@ -17,7 +24,7 @@ const BrowseCategory = () => {
 
         <div className="cs-center">
           <div className={CSS.cs_txt_title_home_brief}>
-            Browse your future opportunities with {" "}
+            Browse your future opportunities with{" "}
             <span className={CSS.cs_txt_title_home_brief_highlight}>MOC</span>
           </div>
         </div>
@@ -26,7 +33,11 @@ const BrowseCategory = () => {
       <Slide direction="left" delay={10} duration={1000} triggerOnce>
         <div className="cs-tm-40">
           <Row className="cs-center">
-            <Col className={classNames("cs-center cs-pointer")} xl={3}>
+            <Col
+              onClick={() => handleNavigate("/courses/medical")}
+              className={classNames("cs-center cs-pointer")}
+              xl={3}
+            >
               <CategoryCard title={"Medical"} icon={faKitMedical} />
             </Col>
           </Row>

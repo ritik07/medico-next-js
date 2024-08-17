@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: http://medicooverseasconsultancy.com/
+
+# Sitemaps
+Sitemap: http://medicooverseasconsultancy.com/sitemap.xml

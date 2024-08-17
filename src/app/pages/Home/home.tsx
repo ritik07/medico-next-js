@@ -1,4 +1,6 @@
 import React from "react";
+import Head from "next/head";
+import type { Metadata } from "next";
 import FeatureCardContainer from "../../components/feature-card-container/feature-card-container";
 import HomeBanner from "../../components/home-banner/home-banner";
 import { Fade, Zoom } from "react-awesome-reveal";
@@ -15,6 +17,39 @@ import {
   faFile,
 } from "@fortawesome/free-solid-svg-icons";
 import Testimonial from "../../components/testimonials/testimonials";
+
+export const metadata: Metadata = {
+  title: "Medico Overseas Consultancy",
+  description:
+    "Medico Overseas Consultancy - Helping students achieve their dreams of studying abroad in top universities worldwide.",
+  keywords:
+    "study abroad, overseas education, MBBS abroad, Medico Overseas, consultancy, education consultancy, universities, international education",
+  openGraph: {
+    title: "Medico Overseas Consultancy",
+    description:
+      "Medico Overseas Consultancy - Helping students achieve their dreams of studying abroad in top universities worldwide.",
+    url: "https://medicooverseasconsultancy.com/",
+    siteName: "Medico Overseas Consultancy",
+    images: [
+      {
+        url: "/path/to/social-image.jpg", // Replace with the actual path to your social image
+        width: 800,
+        height: 600,
+        alt: "Medico Overseas Consultancy",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@MedicoOverseas", // Replace with your Twitter handle if available
+    title: "Medico Overseas Consultancy",
+    description:
+      "Medico Overseas Consultancy - Helping students achieve their dreams of studying abroad in top universities worldwide.",
+  },
+};
+
 const Home = () => {
   const featureCards = [
     {
@@ -43,6 +78,59 @@ const Home = () => {
 
   return (
     <div className={classNames(CSS.cs_home_container)}>
+      <Head>
+        <meta
+          property="og:title"
+          content={metadata.openGraph?.title as string}
+        />
+        <meta
+          property="og:description"
+          content={metadata.openGraph?.description as string}
+        />
+        <meta property="og:url" content={metadata.openGraph?.url as string} />
+        <meta
+          property="og:site_name"
+          content={metadata.openGraph?.siteName as string}
+        />
+        <meta
+          property="og:locale"
+          content={metadata.openGraph?.locale as string}
+        />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:site" content={metadata.twitter?.site as string} />
+        <meta
+          name="twitter:title"
+          content={metadata.twitter?.title as string}
+        />
+        <meta
+          name="twitter:description"
+          content={metadata.twitter?.description as string}
+        />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Medico Overseas Consultancy",
+            url: "https://medicooverseasconsultancy.com/",
+            logo: "../../static/images/logo/MOC L1.png",
+            sameAs: [
+              "https://www.facebook.com/medicooversesasconsultancy/",
+              "https://www.instagram.com/medicooversesasconsultancy/",
+              "https://in.pinterest.com/medicooverseasconsultancy",
+            ],
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+77 082811469(KZ)", // Replace with your contact number
+              contactType: "Customer Support",
+              areaServed: "Global",
+              availableLanguage: "English",
+            },
+          })}
+        </script>
+      </Head>
+
       <HomeBanner />
 
       <Fade

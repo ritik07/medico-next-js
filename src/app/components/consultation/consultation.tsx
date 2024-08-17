@@ -6,8 +6,14 @@ import CSS from "./consultation.module.scss";
 import consult from "./assets/conslt.jpg";
 import { Slide, Zoom } from "react-awesome-reveal";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Consultation = () => {
+  const router = useRouter();
+
+  const handleNavigate = (value: string) => {
+    router.push(value);
+  };
   return (
     <div>
       <Row gutter={[20, 20]}>
@@ -32,7 +38,7 @@ const Consultation = () => {
 
               <Row>
                 <Col xl={7}>
-                  <ExploreBtn text="Contact us" />
+                  <ExploreBtn handleClick={()=>handleNavigate("/contact")} text="Contact us" />
                 </Col>
               </Row>
             </div>

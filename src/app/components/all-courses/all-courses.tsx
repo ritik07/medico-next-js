@@ -8,8 +8,14 @@ import mbbs from "./assets/mbbs.jpg";
 import dentist from "./assets/dentist.jpg";
 import medical from "./assets/medical.jpg";
 import Reveal, { Slide, Zoom } from "react-awesome-reveal";
+import { useRouter } from "next/navigation";
 
 const AllCourses = () => {
+  const router = useRouter();
+
+  const handleNavigate = (value: string) => {
+    router.push(value);
+  };
   return (
     <div>
       <Reveal cascade triggerOnce>
@@ -36,7 +42,7 @@ const AllCourses = () => {
           </Col>
 
           <Col xl={6} xs={24} sm={24} className={classNames("cs-center")}>
-            <ExploreBtn text="Learn more" />
+            <ExploreBtn handleClick={()=>handleNavigate("/courses/medical")} text="Learn more" />
           </Col>
         </Row>
       </Reveal>

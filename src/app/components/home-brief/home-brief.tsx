@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import StatsInfo from "../stats-info/stats-info";
 import ExploreBtn from "../explore-btn/explore-btn";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 const HomeBrief = () => {

@@ -1,18 +1,24 @@
-'use client';
+"use client";
 import classNames from "classnames";
 import React from "react";
 import Slider from "react-slick";
 import one from "../assets/wb-1.jpg";
 import two from "../assets/wb-2.jpg";
 import three from "../assets/wb-3.jpg";
-import Image from 'next/image';
+import Image from "next/image";
 import CSS from "./web-banner.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { Col, Row } from "antd";
 import { Fade, Slide } from "react-awesome-reveal";
+import { useRouter } from "next/navigation";
 
 const WebBanner = () => {
+  const router = useRouter();
+
+  const handleNavigate = (value: string) => {
+    router.push(value);
+  };
   var settings = {
     dots: false,
     infinite: true,
@@ -80,7 +86,10 @@ const WebBanner = () => {
                 <Row className="cs-tm-20">
                   <Col xl={4} className={classNames("cs-pointer")}>
                     <Fade delay={1000} direction="up" cascade triggerOnce>
-                      <div className={classNames(CSS.btn_slider)}>
+                      <div
+                        className={classNames(CSS.btn_slider)}
+                        onClick={() => handleNavigate("/courses/medical")}
+                      >
                         Explore More
                       </div>
                     </Fade>
@@ -114,7 +123,10 @@ const WebBanner = () => {
                 <Row className="cs-tm-20">
                   <Col xl={4} className={classNames("cs-pointer")}>
                     <Fade delay={1000} direction="up" cascade triggerOnce>
-                      <div className={classNames(CSS.btn_slider)}>
+                      <div
+                        className={classNames(CSS.btn_slider)}
+                        onClick={() => handleNavigate("/courses/medical")}
+                      >
                         Get Started
                       </div>
                     </Fade>
@@ -148,7 +160,10 @@ const WebBanner = () => {
                 <Row className="cs-tm-20">
                   <Col xl={4} className={classNames("cs-pointer")}>
                     <Fade delay={1000} direction="up" cascade triggerOnce>
-                      <div className={classNames(CSS.btn_slider)}>
+                      <div
+                        className={classNames(CSS.btn_slider)}
+                        onClick={() => handleNavigate("/courses/medical")}
+                      >
                         Learn More
                       </div>
                     </Fade>

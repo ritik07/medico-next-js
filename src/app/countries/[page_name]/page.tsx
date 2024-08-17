@@ -1,4 +1,4 @@
-"use client"
+"use client";
 // app/countries/[page_name]/page.tsx
 import React from "react";
 import { useRouter } from "next/navigation";
@@ -14,7 +14,8 @@ import kazakhstanImg from "./assets/images/kz.jpg";
 import CSS from "./countries-single.module.scss";
 import sideCover from "./assets/images/side-cover.jpg";
 import { useParams } from "next/navigation";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
+import Head from "next/head"; // Import Head component from Next.js
 
 const CountriesSingle: React.FC = () => {
   const router = useRouter();
@@ -30,11 +31,43 @@ const CountriesSingle: React.FC = () => {
   const getImage = () => {
     if (page_name === "Russia") return russiaImg || "";
     if (page_name === "Kyrgyzstan") return kyrgyzstanImg || "";
-    if (page_name === "kazakhstan") return kazakhstanImg || "";
+    if (page_name === "Kazakhstan") return kazakhstanImg || "";
   };
 
   return (
     <div>
+      <Head>
+        <title>Study MBBS in {page_name} - Medico Overseas</title>
+        <meta
+          name="description"
+          content={`Discover why ${page_name} is a top destination for MBBS. Medico Overseas provides comprehensive guidance and support for students pursuing medical education in ${page_name}.`}
+        />
+        <meta
+          name="keywords"
+          content={`MBBS in ${page_name}, study MBBS in ${page_name}, medical education in ${page_name}, Medico Overseas, study abroad, medical universities in ${page_name}`}
+        />
+        <meta name="author" content="Medico Overseas Consultancy" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          property="og:title"
+          content={`Study MBBS in ${page_name} - Medico Overseas`}
+        />
+        <meta
+          property="og:description"
+          content={`Explore top medical universities in ${page_name} with Medico Overseas. Get expert guidance on the MBBS admission process, requirements, and more.`}
+        />
+        <meta property="og:image" content="/path-to-your-image.jpg" />
+        <meta
+          property="og:url"
+          content={`https://medicooverseasconsultancy.com/countries/${page_name}`}
+        />
+        <meta property="og:type" content="website" />
+        <link
+          rel="canonical"
+          href={`https://medicooverseasconsultancy.com/countries/${page_name}`}
+        />
+      </Head>
+
       <CoverImg text={page_name} image={getImage() || ""} />
       <div className={classNames(CSS.cs_home_component_wrapper)}>
         <Row className={classNames("cs-tm-40")} gutter={[20, 20]}>
@@ -57,7 +90,7 @@ const CountriesSingle: React.FC = () => {
 
         <Row gutter={[20, 20]} className={classNames("cs-tm-80")}>
           <Col xl={17}>
-            <div className={classNames(CSS.title)}>Why {page_name} ?</div>
+            <div className={classNames(CSS.title)}>Why {page_name}?</div>
             <hr className={classNames(CSS.cs_hr)} />
 
             <div className={CSS.country_title}>{data.description}</div>

@@ -64,7 +64,7 @@ const NavInfoBar: React.FC = () => {
           <Row gutter={[10, 10]}>
             <Col xl={12} lg={12} md={12}>
               <a
-                href="https://www.instagram.com/medico.overseas/"
+                href="https://www.instagram.com/medicooverseasconsultancy/"
                 target={"_blank"}
               >
                 <InstagramOutlined className="cs-font-white cs-fs-16" />

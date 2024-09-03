@@ -117,7 +117,7 @@ const Home = () => {
             logo: "../../static/images/logo/MOC L1.png",
             sameAs: [
               "https://www.facebook.com/medicooversesasconsultancy/",
-              "https://www.instagram.com/medicooversesasconsultancy/",
+              "https://www.instagram.com/medicooverseasconsultancy/",
               "https://in.pinterest.com/medicooverseasconsultancy",
             ],
             contactPoint: {

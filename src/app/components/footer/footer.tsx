@@ -84,7 +84,7 @@ const Footer = () => {
 
                 <div className="cs-dis-flex cs-tm-40">
                   <a
-                    href="https://www.instagram.com/medico.overseas/"
+                    href="https://www.instagram.com/medicooverseasconsultancy/"
                     target={"_blank"}
                   >
                     <InstagramFilled

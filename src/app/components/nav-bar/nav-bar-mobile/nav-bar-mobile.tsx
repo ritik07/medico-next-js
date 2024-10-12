@@ -71,7 +71,7 @@ const NavBarMobile = () => {
             Kyrgyzstan
           </Typography.Title>
           <Typography.Title
-            onClick={() => handleActiveMenu("countries/kazakhstan")}
+            onClick={() => handleActiveMenu("/countries/kazakhstan")}
             className={`${CSS.cs_nav_bar_title_container} ${
               currentActive === "Russia" ? CSS.cs_menu_active_bg : ""
             }`}

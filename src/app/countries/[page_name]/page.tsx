@@ -31,7 +31,7 @@ const CountriesSingle: React.FC = () => {
   const getImage = () => {
     if (page_name === "Russia") return russiaImg || "";
     if (page_name === "Kyrgyzstan") return kyrgyzstanImg || "";
-    if (page_name === "Kazakhstan") return kazakhstanImg || "";
+    if (page_name === "kazakhstan") return kazakhstanImg || "";
   };
 
   return (

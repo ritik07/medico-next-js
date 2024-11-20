@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { Col, Row } from "antd";
 import logoImg from "../../static/images/logo/MOC L2.png";
@@ -162,6 +162,7 @@ const Footer = () => {
                   Other link
                 </div>
                 <div
+                  onClick={() => handleNavigate("/policies")}
                   className={classNames(
                     "cs-pointer cs-center cs-bp-8",
                     CSS.cs_nav_logo_title
@@ -169,14 +170,14 @@ const Footer = () => {
                 >
                   Privacy Policy
                 </div>
-                <div
+                {/* <div
                   className={classNames(
                     "cs-pointer cs-center cs-bp-8",
                     CSS.cs_nav_logo_title
                   )}
                 >
                   Terms & Conditions
-                </div>
+                </div> */}
               </Col>
             </Row>
           </Col>
